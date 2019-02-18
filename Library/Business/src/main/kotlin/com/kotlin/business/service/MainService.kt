@@ -1,4 +1,4 @@
-package com.kotlin.business.Service
+package com.kotlin.business.service
 
 import com.kotlin.data.mybatis.repository.NoticeMapper
 import org.springframework.beans.factory.annotation.Autowired

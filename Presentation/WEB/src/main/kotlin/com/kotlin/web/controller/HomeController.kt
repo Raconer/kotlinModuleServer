@@ -2,7 +2,7 @@ package com.kotlin.web.controller
 
 
 
-import com.kotlin.business.Service.MainService
+import com.kotlin.business.service.MainService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
