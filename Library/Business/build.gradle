@@ -1,0 +1,7 @@
+group 'com.kotlin.module'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(":Data")
+    //compile 'org.springframework:spring-context'
+}

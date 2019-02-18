@@ -1,0 +1,17 @@
+group 'com.kotlin.module'
+version '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+}
+
+dependencies{
+    compile project(":Business")
+    compile("org.springframework.boot:spring-boot-starter-mustache")
+    //compile("org.springframework.boot:spring-boot-starter-web:${rootProject.springBootVersion}")
+    //compile("org.springframework.boot:spring-boot-starter-tomcat:${rootProject.springBootVersion}")
+
+    // EnableJpaAuditing 어노테이션을 사용하기 위해
+    // Config file을 읽는다
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+}

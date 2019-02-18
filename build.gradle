@@ -1,0 +1,59 @@
+group 'com.kotlin.module'
+version '1.0-SNAPSHOT'
+
+
+buildscript {
+    ext{
+        springBootVersion = "2.0.2.RELEASE"
+        kotlinVersion = "1.3.11"
+    }
+    repositories {
+        jcenter()
+    }
+    dependencies{
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    }
+}
+
+subprojects {
+    apply plugin: "kotlin"
+    apply plugin: "kotlin-spring"
+    apply plugin: "org.springframework.boot"
+    apply plugin: "io.spring.dependency-management"
+/*
+ *
+ *    //bootJar 비활성화시
+ *       jar.enabled = true
+ *       bootJar.enabled = false
+ *
+ *    //bootWar 비활성화시
+ *       war.enabled = true
+ *       bootWar.enabled = false
+ *
+ **/
+
+
+    jar { enabled = true }
+    bootJar { enabled = false }
+
+    sourceCompatibility = 1.8
+    compileKotlin {
+        kotlinOptions {
+            freeCompilerArgs = ["-Xjsr305=strict"]
+            jvmTarget = "1.8"
+        }
+    }
+
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+        compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+        //compile("org.springframework.boot:spring-boot-configuration-processor:$springBootVersion")
+
+
+    }
+}
