@@ -33,8 +33,6 @@ subprojects {
  *       bootWar.enabled = false
  *
  **/
-
-
     jar { enabled = true }
     bootJar { enabled = false }
 
@@ -53,7 +51,8 @@ subprojects {
         compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
         compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
         //compile("org.springframework.boot:spring-boot-configuration-processor:$springBootVersion")
-
+        // mysql configuration을 위해
+        compile('org.springframework.boot:spring-boot-starter-web')
 
     }
 }
