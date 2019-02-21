@@ -8,6 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-main.mustache / {{cnt}}
+main.mustache / {{cnt}} <br>
+    <ul>
+        {{#noticeList}}
+            <li>
+                <ul>
+                    <li>{{id}}</li>
+                    <li>{{title}}</li>
+                    <li>{{content}}</li>
+                </ul>
+            </li>
+        {{/noticeList}}
+        테스트
+        테스트
+        테스트
+        테스트
+        테스트
+
+    </ul>
 </body>
 </html>

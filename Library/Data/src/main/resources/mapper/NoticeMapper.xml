@@ -7,4 +7,9 @@
         SELECT  COUNT(*)
         FROM    notice
     </select>
+
+    <select id="getNoticeList" resultType="com.kotlin.model.Notice">
+        SELECT  id, title, content, creDate
+        FROM    notice
+    </select>
 </mapper>

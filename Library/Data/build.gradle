@@ -3,6 +3,7 @@ version '1.0-SNAPSHOT'
 
 // JPA & Hibernate.
 dependencies{
+    compile project(":Model")
     compile('mysql:mysql-connector-java:6.0.5')
     compile('org.mybatis:mybatis:3.4.2')
     compile('org.mybatis:mybatis-spring:1.3.1')
