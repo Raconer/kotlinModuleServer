@@ -6,12 +6,23 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 </head>
 <body>
-main.mustache / {{cnt}} <br>
-    <ul>
+
+<script id="address-template" type="text/x-handlebars-template">
+    <p>You can find me in {{cnt}}. My address is {{cnt}} {{cnt}}.</p>
+    아무것도 안뜨는데?
+</script>
+
+<div class="content-placeholder"></div>
+
+main.mustache / {{cnt}}
+<br>
+<br>
+<ul>
         {{#noticeList}}
-            <li>
+         <li>
                 <ul>
                     <li>{{id}}</li>
                     <li>{{title}}</li>
@@ -19,10 +30,15 @@ main.mustache / {{cnt}} <br>
                     {{#creDate}}
                         <li>{{creDate}}</li>
                     {{/creDate}}
+                    {{^creDate}}
+                        <li>Not Saved Data</li>
+                    {{/creDate}}
                 </ul>
             </li>
         {{/noticeList}}
-        테스트
+        {{> sub}}
+        <br>
+        테스트 테스트
     </ul>
 </body>
 </html>
