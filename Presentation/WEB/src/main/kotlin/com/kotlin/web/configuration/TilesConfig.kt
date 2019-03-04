@@ -14,7 +14,10 @@ class TilesConfig : WebMvcConfigurer{
     fun tilesConfigurer(): TilesConfigurer {
 
         val configurer = TilesConfigurer()
-        configurer.setDefinitions("/WEB-INF/tiles/tiles.xml")
+        val path  = arrayOf("/WEB-INF/tiles/tiles.xml")
+
+        configurer.setDefinitions(*path)
+
         configurer.setCheckRefresh(true)
         return configurer
     }
