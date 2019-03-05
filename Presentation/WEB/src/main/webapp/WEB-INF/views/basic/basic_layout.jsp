@@ -23,6 +23,7 @@
         <div class="bHead">
             <div class="bCenContent">
                 머리
+                <%--<tiles:insertAttribute name="head"/>--%>
             </div>
         </div>
         <div class="bMain">
@@ -31,6 +32,7 @@
         <div class="bFooter">
             <div class="bCenContent">
                 발
+                <%--<tiles:insertAttribute name="foot"/>--%>
             </div>
         </div>
     </div>
