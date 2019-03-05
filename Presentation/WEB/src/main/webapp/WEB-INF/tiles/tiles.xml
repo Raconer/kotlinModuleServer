@@ -7,12 +7,15 @@
 <tiles-definitions>
 
     <!-- 기본 레이아웃 템플릿 정의-->
-    <definition name="default_layout" template="/WEB-INF/views/default/default_layout.jsp">
+    <definition name="basic_layout" template="/WEB-INF/views/layout/basic_layout.jsp">
         <put-attribute name="content" value=""/>
     </definition>
 
-    <definition name="main" extends="default_layout">
+    <definition name="main" extends="basic_layout">
         <put-attribute name="title" value="Main Title"/>
-        <put-attribute name="content" value="/WEB-INF/views/main/main.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/views/header/basic_h.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/main/main.jsp"/>
+        <!--<put-attribute name="footer" value="/WEB-INF/views/main/main.jsp"/>-->
     </definition>
+
 </tiles-definitions>

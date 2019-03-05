@@ -1,0 +1,9 @@
+/*All Layout Default Setting*/
+body{padding:0; margin: 0;}
+
+/*Basic_Layout(bal)*/
+.bContainer { width:100%; height:auto;}
+.bHead { width: auto; height:100px;}
+.bCenContent { text-align: center;}
+.bMain { width:1080px; min-height:969px; background-color:lavender; margin: 0 auto;}
+.bFooter { width: auto; height:200px;}
