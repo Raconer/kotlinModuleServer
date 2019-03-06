@@ -17,6 +17,9 @@
         <tiles:insertAttribute name="title"/>
     </title>
     <tiles:insertAttribute name="header"/>
+    <script type="text/javascript">
+        var templateID = "${templateID}";
+    </script>
 </head>
 <body>
     <div class="bContainer">
@@ -37,5 +40,5 @@
         </div>
     </div>
 </body>
-<%--<tiles:insertAttribute name="footer"/>--%>
+<tiles:insertAttribute name="footer"/>
 </html>

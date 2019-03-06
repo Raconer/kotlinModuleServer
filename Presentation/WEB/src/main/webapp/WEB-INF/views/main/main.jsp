@@ -1,2 +1,2 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-테스트
+<div id="noticeList"></div>

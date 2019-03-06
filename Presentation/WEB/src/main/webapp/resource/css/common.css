@@ -1,9 +1,18 @@
 /*All Layout Default Setting*/
-body{padding:0; margin: 0;}
+body{ padding:0; margin: 0; }
+table{ width: 100%; padding: 10px 0px; }
+th,td{ text-align : center; }
+th{ padding: 10px 0;}
+td{ padding: 6px 0px; font-family: monospace;}
 
 /*Basic_Layout(bal)*/
-.bContainer { width:100%; height:auto;}
-.bHead { width: auto; height:100px;}
-.bCenContent { text-align: center;}
-.bMain { width:1080px; min-height:969px; background-color:lavender; margin: 0 auto;}
-.bFooter { width: auto; height:200px;}
+.bContainer { width:100%; height:auto; }
+.bHead { width: auto; height:100px; }
+.bCenContent { text-align: center; }
+.bMain { width:1080px; min-height:969px; background-color:lavender; margin: 0 auto; }
+.bFooter { width: auto; height:200px; }
+
+/* Div Notice */
+.divN {text-align: center;}
+.divNH>div { display: table-cell;}
+.dTV1>div {display: table-cell;}
