@@ -2,19 +2,19 @@ package com.kotlin.web.controller
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
 class NoticeController{
 
-    @GetMapping("/noticeTable")
-    fun noticeTable() : String{
-        System.out.println("Notice")
-        return "/notice/table_N"
-    }
+    @GetMapping("/notice")
+    fun notice(@RequestParam("id") id :Int) : String{
+        System.out.println("Notice : $id")
+        val path : String = when(id){
+            2 -> "/notice/div_N"
+            else -> "/notice/table_N" // 원래는 id 가 1일때
+        }
 
-    @GetMapping("/noticeDiv")
-    fun noticeDiv() : String{
-        System.out.println("Notice")
-        return "/notice/div_N"
+        return path
     }
 }

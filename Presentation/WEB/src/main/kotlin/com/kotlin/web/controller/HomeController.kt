@@ -21,8 +21,8 @@ class HomeController{
     lateinit var mainService: MainService
 
 
-    @GetMapping("/{templateID}")
-    fun main(model:Model, request:HttpServletRequest, @PathVariable templateID:Integer):String{
+    @GetMapping("/notice/{templateID}")
+    fun notice(model:Model, request:HttpServletRequest, @PathVariable templateID: Int):String{
         System.out.println("Start home / Get Mapping : " + templateID)
         var cnt:Int = mainService.getListCnt()
         val noticeList: List<Notice> = mainService.getList()
@@ -36,5 +36,10 @@ class HomeController{
         model["templateID"] = templateID
 
         return "main"
+    }
+
+    @GetMapping("/index")
+    fun indexTemplate(model:Model, request:HttpServletRequest):String{
+        return "zindex"
     }
 }

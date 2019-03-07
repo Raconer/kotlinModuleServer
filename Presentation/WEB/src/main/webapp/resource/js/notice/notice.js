@@ -1,23 +1,11 @@
 $(document).ready(function () {
-
-
-    readNoticeTemplate(templateID);
-
-    function readNoticeTemplate(category){
-        var nPath = "";
-
-        switch (category) {
-            case "1" :
-                nPath = "Table";
-                break;
-            case "2":
-                nPath = "Div";
-                break;
-        }
-
+    readNoticeTemplate(id);
+    function readNoticeTemplate(id){
         $.ajax({
             type:"GET",
-            url : "/notice" + nPath,
+            url : "/notice" ,
+            data : { id : id },
+            contentType: "application/json; charset=UTF-8" ,
             dataType : "text",
             success : function (data) {
                 $("#noticeList").append(data);

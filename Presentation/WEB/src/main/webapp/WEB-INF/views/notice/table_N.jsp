@@ -1,10 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=utf-8"%>
-
 <table class="tableV1">
-    <tr>
-        <th colspan="6"> 게시판( feat.Table tag )</th>
-    </tr>
+    <caption>
+        게시판( feat.Table tag )
+    </caption>
     <tr>
         <th>Number</th>
         <th>Category</th>

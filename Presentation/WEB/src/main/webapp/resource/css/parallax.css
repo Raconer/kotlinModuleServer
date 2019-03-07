@@ -1,0 +1,7 @@
+/*parallax_Layout*/
+
+div {width: 100%; height: 100%; }
+
+.iDiv1 { background: url("../img/BackGround 1920x1080.jpg") center center no-repeat; background-size: cover; }
+.iDiv2 { background: url("../img/2adf80c64724300575de6cccc2f9fbdb.png") center center no-repeat; background-size: cover; }
+.iDiv3 { background: url("../img/20171018192333_0h334.jpg") center center no-repeat; background-size: cover; }
