@@ -14,22 +14,25 @@ $(document).ready(function () {
         var standard = $(this).scrollTop();
         //$("#"+ data.get(0).id).css('background-position-y', standard);
        // $("#"+ data.get(0).id).css({"top": standard });
-        $("#"+ data.get(0).id).css({"top": standard });
+       // $("#"+ data.get(0).id).css({"top": standard });
       //  console.log(standard);
-        for(var i = 1; i< data.length-1; i++){
-            var className = data.get(i).id;
-            parallaxScroll(standard, $("#" + className));
+        var height = 0;
+        for(var i = 0; i< data.length; i++){
+            var className = $("#" + data.get(i).id);
+            height += className.height();
+            parallaxScroll(standard, className, height, i);
         }
     });
 
-    function parallaxScroll(standard, selector) {
+    function parallaxScroll(standard, selector, height, i) {
         var top = selector.offset().top;
+        var selHeight = selector.height();
+        var relHeight = height - selHeight;
 
-        if(standard >= top ){
-            console.log(top + ' / ' + standard + ' / ' + (standard - top));
-            //selector.css({'top' : (standard - top)});
-        }else{
-        //    selector.css({'top' : 0 });
+        console.log(i+' = '+standard +'/'+ relHeight +'/'+ (standard - relHeight) +'/' + top);
+
+        if(standard > relHeight){
+            selector.css({'top' : (standard - relHeight)});
         }
     }
 
