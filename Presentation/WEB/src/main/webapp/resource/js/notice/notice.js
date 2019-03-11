@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     readNoticeTemplate(id);
     function readNoticeTemplate(id){
         $.ajax({
@@ -9,6 +10,7 @@ $(document).ready(function () {
             dataType : "text",
             success : function (data) {
                 $("#noticeList").append(data);
+                //document.getElementById("#noticeList").append(data);
             },
             error : function () {
                 alert("notice template read error");

@@ -7,27 +7,36 @@
 <tiles-definitions>
 
     <!-- 기본 레이아웃 템플릿 정의-->
-    <definition name="basic_layout" template="/WEB-INF/views/basic/basic_layout.jsp">
-        <put-attribute name="content" value=""/>
+    <definition name="basic_layout"     template="/WEB-INF/views/layout/basic/basic_layout.jsp">
+        <put-attribute name="content"   value=""/>
     </definition>
 
-    <definition name="zindex_layout" template="/WEB-INF/views/parallax/parallax_layout.jsp">
-        <put-attribute name="content" value=""/>
+    <definition name="pBasic_layout"    template="/WEB-INF/views/layout/parallax/basic/pBasic_layout.jsp">
+        <put-attribute name="content"   value=""/>
     </definition>
 
-
-    <definition name="main" extends="basic_layout">
-        <put-attribute name="title" value="Main Title"/>
-        <put-attribute name="header" value="/WEB-INF/views/basic/basic_h.jsp"/>
-        <put-attribute name="body" value="/WEB-INF/views/main/main.jsp"/>
-        <put-attribute name="footer" value="/WEB-INF/views/footer/notice_f.jsp"/>
+    <definition name="pTimeD_layout"    template="/WEB-INF/views/layout/parallax/timeDifference/pTimeD_layout.jsp">
+        <put-attribute name="content"   value=""/>
     </definition>
 
-    <definition name="zindex" extends="zindex_layout">
-        <put-attribute name="title" value="Main Title"/>
-        <put-attribute name="header" value="/WEB-INF/views/parallax/parallax_h.jsp"/>
-        <!--<put-attribute name="body" value="/WEB-INF/views/main/zindex_m.jsp"/>-->
-        <put-attribute name="footer" value="/WEB-INF/views/footer/parallax_f.jsp"/>
+    <definition name="main"             extends="basic_layout">
+        <put-attribute name="title"     value="Main Title"/>
+        <put-attribute name="header"    value="/WEB-INF/views/header/basic/basic_h.jsp"/>
+        <put-attribute name="body"      value="/WEB-INF/views/main/main.jsp"/>
+        <put-attribute name="footer"    value="/WEB-INF/views/footer/notice/notice_f.jsp"/>
+    </definition>
+
+    <definition name="pBasic"           extends="pBasic_layout">
+        <put-attribute name="title"     value="Main Title"/>
+        <put-attribute name="header"    value="/WEB-INF/views/header/parallax/parallaxB_h.jsp"/>
+        <put-attribute name="body"      value="/WEB-INF/views/main/main.jsp"/>
+        <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxB_f.jsp"/>
+    </definition>
+
+    <definition name="pTimeD"           extends="pBasic_layout">
+        <put-attribute name="title"     value="Main Title"/>
+        <put-attribute name="header"    value="/WEB-INF/views/header/parallax/parallaxTD_h.jsp"/>
+        <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxTD_f.jsp"/>
     </definition>
 
 </tiles-definitions>

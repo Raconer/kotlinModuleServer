@@ -17,9 +17,7 @@
         <tiles:insertAttribute name="title"/>
     </title>
     <tiles:insertAttribute name="header"/>
-    <script type="text/javascript">
-        var id = "${templateID}";
-    </script>
+
 </head>
 <body>
     <div class="bContainer">

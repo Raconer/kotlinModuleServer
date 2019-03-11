@@ -14,7 +14,6 @@ class NoticeController{
             2 -> "/notice/div_N"
             else -> "/notice/table_N" // 원래는 id 가 1일때
         }
-
         return path
     }
 }

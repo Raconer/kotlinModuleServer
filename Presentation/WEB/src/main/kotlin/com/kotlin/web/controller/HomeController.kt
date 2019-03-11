@@ -38,8 +38,5 @@ class HomeController{
         return "main"
     }
 
-    @GetMapping("/index")
-    fun indexTemplate(model:Model, request:HttpServletRequest):String{
-        return "zindex"
-    }
+
 }
