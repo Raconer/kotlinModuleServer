@@ -33,7 +33,7 @@
         <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxB_f.jsp"/>
     </definition>
 
-    <definition name="pTimeD"           extends="pBasic_layout">
+    <definition name="pTimeD"           extends="pTimeD_layout">
         <put-attribute name="title"     value="Main Title"/>
         <put-attribute name="header"    value="/WEB-INF/views/header/parallax/parallaxTD_h.jsp"/>
         <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxTD_f.jsp"/>

@@ -16,5 +16,9 @@ class ParallaxContoller{
         return "pBasic"
     }
 
+    @GetMapping("parallax/timeD")
+    fun timeD(model: Model, request: HttpServletRequest):String{
+        return "pTimeD"
+    }
 
 }
