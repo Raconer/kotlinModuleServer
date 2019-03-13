@@ -1,9 +1,15 @@
 /*parallax_Layout*/
 html, body{ padding:0; margin: 0; height: 100%; width: 100%;}
 #parallaxB {height:  100%;}
-.iDiv {         width: 100%; height: 100%;  padding: 0px; margin: 0px; position: relative; -webkit-overflow-scrolling: touch;}
-.iDivBase {    width: 100%; height: 100%;   padding: 0px; margin: 0px; position: relative; -webkit-overflow-scrolling: touch;   z-index: 1;}
-.iDivSmall {    width: 100%; height: 50%;   padding: 0px; margin: 0px; position: absolute; -webkit-overflow-scrolling: touch;   z-index: 2;}
+/* timeD*/
+#timeDiv { width: 100%; height: 100%;}
+
+/* LF*/
+#LFMove_l { width: 100%; height: 100%;}
+
+.iDiv       {   width: 100%; height: 100%;  padding: 0px; margin: 0px; position: relative; -webkit-overflow-scrolling: touch;}
+.iDivBase   {   width: 100%; height: 100%;  padding: 0px; margin: 0px; position: relative; -webkit-overflow-scrolling: touch;   z-index: 1;}
+.iDivSmall  {   width: 100%; height: 50%;   padding: 0px; margin: 0px; position: absolute; -webkit-overflow-scrolling: touch;   z-index: 2;}
 /*
     #div1 { background: url("../img/20171004_004.jpg") no-repeat; }
     #div2 { background: url("../img/BackGround 1920x1080.jpg") no-repeat; }
@@ -15,6 +21,7 @@ html, body{ padding:0; margin: 0; height: 100%; width: 100%;}
     민트색     rgb(121, 248, 149)
     회색과 하늘색 중간 rgb(193, 214, 253);
     회색      rgb(70, 76, 94);
+    초록  rgb(108, 191, 114);
 */
 /*
         position

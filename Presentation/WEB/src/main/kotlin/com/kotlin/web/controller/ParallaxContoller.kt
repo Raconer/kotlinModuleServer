@@ -21,4 +21,9 @@ class ParallaxContoller{
         return "pTimeD"
     }
 
+    @GetMapping("parallax/LFMove")
+    fun LFMove(model: Model, request: HttpServletRequest):String{
+        return "LFMove"
+    }
+
 }

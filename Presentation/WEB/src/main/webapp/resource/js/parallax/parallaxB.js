@@ -1,15 +1,8 @@
 $(document).ready(function () {
+    var paraContain = "#parallaxB"
+    var data = $(paraContain).children('div');
 
-    var data = $("#parallaxB").children('div');
-
-    // div 랜덤 색상 입히기
-    for(var i = 0; i < data.length; i++){
-        var tempSelect = data.get(i).id;
-        var R = getRandInt();
-        var G = getRandInt();
-        var B = getRandInt();
-        $('#'+tempSelect).css({ backgroundColor : "rgb("+R+","+G+","+B+")"});
-    }
+    makeDivColor(paraContain);
 
     $(window).scroll(function () {
         var standard = $(this).scrollTop();
@@ -36,8 +29,4 @@ $(document).ready(function () {
        var height = window.innerHeight;
        $('.iDiv').height(height);
     });
-
-    function getRandInt(){
-        return Math.floor(Math.random() * (256)) + 0;
-    }
 });

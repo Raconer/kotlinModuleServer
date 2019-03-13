@@ -10,11 +10,18 @@
 </head>
 <body>
     <div id="timeDiv">
-        <div id="tempDiv1" class="iDivBase"         data-scroll = 'fast'>테스트_1</div>
-        <div id="tempDiv2" class="iDivSmall"    data-scroll = 'slow'>테스트_2</div>
-        <div id="tempDiv3" class="iDivBase"         data-scroll = 'fast'>테스트_3</div>
+        <c:forEach var="i" begin="1" end="7">
+            <div id="tempDiv${i}"       <c:choose >
+                                            <c:when test="${i%2 gt 0}">
+                                                class="iDivBase" data-scroll = 'fast'
+                                            </c:when>
+                                            <c:otherwise>
+                                                class="iDivSmall" data-scroll = 'slow'
+                                            </c:otherwise>
+                                        </c:choose>
+                        >테스트_${i}</div>
+        </c:forEach>
     </div>
-
 </body>
     <tiles:insertAttribute name="footer"/>
 </html>

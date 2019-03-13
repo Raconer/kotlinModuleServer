@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var paraContain = "#timeDiv";
-    makeDivColor();
+    makeDivColor(paraContain);
 
     $(window).scroll(function () {
 
@@ -13,40 +13,24 @@ $(document).ready(function () {
             var speedData = data.data('scroll');
             height += data.height();
 
-            setDivScroll(scroll, data, speedData, height);
+            setDivScroll(scroll, data, speedData, height, i);
         }
     });
 
-    function setDivScroll(scroll, data, speedData, height){
+    function setDivScroll(scroll, data, speedData, height, i){
         var speed = 1;
-        var dataTop = data.offset().top;
         var cHeight = height - data.height();
+
+        // 비율이 중요하다 slow 1 fast 150000
         switch (speedData) {
             case 'slow' :
-                speed = (cHeight - dataTop - scroll);
-                console.log(cHeight +' - '+  dataTop + ' - '+ scroll+' = ' + speed);
-                data.css({top : dataTop + speed * 0.3});
+                    speed = (cHeight - (scroll / 2));
                 break;
             case 'fast' :
-                speed = (scroll - dataTop);
-                console.log(cHeight +' - '+  dataTop + ' - '+ scroll+' = ' + speed);
-                data.css({top :  speed });
+                speed = -(scroll / 300000);
                 break;
         }
-    }
 
-    function makeDivColor(){
-        var chilDiv = $(paraContain).children('div');
-
-        for(var i = 0; i <  chilDiv.length; i++){
-            var childId = chilDiv.get(i).id;
-            var R = randNum();
-            var G = randNum();
-            var B = randNum();
-            $('#' + childId).css({backgroundColor : "rgb("+R+","+G+","+B+")"});
-        }
-    }
-    function randNum() {
-        return Math.floor(Math.random() * (256)) + 0;
+        data.css({top : speed+"px"});
     }
 });
