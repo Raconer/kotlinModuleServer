@@ -10,6 +10,7 @@ import org.springframework.ui.Model
 import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.servlet.ModelAndView
 import javax.servlet.http.HttpServletRequest
 
 
@@ -22,7 +23,7 @@ class HomeController{
 
 
     @GetMapping("/notice/{templateID}")
-    fun notice(model:Model, request:HttpServletRequest, @PathVariable templateID: Int):String{
+    fun notice(model:Model, request:HttpServletRequest, @PathVariable templateID: Int, mav:ModelAndView):String{
         System.out.println("Start home / Get Mapping : " + templateID)
         var cnt:Int = mainService.getListCnt()
         val noticeList: List<Notice> = mainService.getList()
@@ -34,6 +35,7 @@ class HomeController{
         model["cnt"] = cnt
         model["noticeList"] = noticeList
         model["templateID"] = templateID
+        model["title"] = "타일즈 코어도 된다"
 
         return "main"
     }

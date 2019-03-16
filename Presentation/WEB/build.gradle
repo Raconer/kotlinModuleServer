@@ -11,9 +11,12 @@ dependencies{
     //compile("org.springframework.boot:spring-boot-starter-tomcat:${rootProject.springBootVersion}")
 
     // tiles 설정
-    compile("org.apache.tiles:tiles-jsp:3.0.8")
+    //compile("org.apache.tiles:tiles-jsp:3.0.8")
+    compile("org.apache.tiles:tiles-extras:3.0.8")
     // tiles.xml을 찾아 갈때 필요 하다
     compile("javax.servlet:jstl:${rootProject.jstlVersion}")
+
+
 
     // EnableJpaAuditing 어노테이션을 사용하기 위해
     // Config file을 읽는다
