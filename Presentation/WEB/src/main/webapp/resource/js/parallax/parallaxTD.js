@@ -3,8 +3,8 @@ $(document).ready(function () {
     makeDivColor(paraContain);
 
     $(window).scroll(function () {
-        var data = $(paraContain).children('div');
+
         var scroll = $(this).scrollTop();
-        setParallaxTD(data, scroll);
+        setParallaxTD(paraContain, scroll);
     });
 });

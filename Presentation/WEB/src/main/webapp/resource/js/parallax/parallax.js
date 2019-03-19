@@ -7,8 +7,11 @@
 /**Other END**/
 /** Parallax Basic Setting **/
 
-function setParallaxB(data, scroll){
-    var height = 0;
+function setParallaxB(paraContain, scroll){
+
+    var parent = $(paraContain);
+    var data = parent.children('div');
+    var height = parent.offset().top;
 
     for(var i = 0; i< data.length; i++){
         var selector = $("#" + data.get(i).id);
@@ -27,8 +30,11 @@ function parallaxScroll(scroll, selector, height) {
 /** Parallax Basic Setting END**/
 
 /** Parallax Time Different Setting **/
-function setParallaxTD(data, scroll){
-    var height = 0;
+function setParallaxTD(paraContain, scroll){
+    var parent = $(paraContain);
+    var data = parent.children('div');
+    var height = parent.offset().top;
+
     for(var i = 0; i < data.length; i++){
         var selector = $('#' + data.get(i).id);
         var speedData = selector.data('scroll');
@@ -41,17 +47,16 @@ function setParallaxTD(data, scroll){
 function setDivScroll(scroll, selector, speedData, height){
         var speed = 1;
         var cHeight = height - selector.height();
-
+        
         // 비율이 중요하다 slow 1 fast 150000
-        switch (speedData) {
+        /*switch (speedData) {
             case 'slow' :
                     speed = (cHeight - (scroll / 2));
                 break;
             case 'fast' :
                 speed = -(scroll / 300000);
                 break;
-        }
-
-        selector.css({top : speed+"px"});
+        }*/
+        //selector.css({top : speed+"px"});
     }
 /** Parallax Time Different Setting END **/

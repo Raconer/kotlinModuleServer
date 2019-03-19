@@ -9,15 +9,17 @@
     <tiles:insertAttribute name="header"/>
 </head>
 <body>
-    <%--
-    <div id="div1" class="iDiv iDiv1" >focus1</div>
-    <div id="div2" class="iDiv iDiv2">focus2</div>
-    <div id="div3" class="iDiv iDiv3">focus3</div>
-    <div id="div4" class="iDiv iDiv4">focus4</div>
+
+<div id="div1" class="iDiv iDiv1" >focus1</div>
+<%--
+
+        <div id="div2" class="iDiv iDiv2">focus2</div>
+        <div id="div3" class="iDiv iDiv3">focus3</div>
+        <div id="div4" class="iDiv iDiv4">focus4</div>
     --%>
     <div id = "parallaxB">
         <c:forEach var="i" begin="1" end="10">
-            <div id="div${i}" class="iDiv" >
+            <div id="tempDiv${i}" class="iDiv" >
                 테스트_${i}
                 <tiles:insertAttribute name="body"/>
             </div>

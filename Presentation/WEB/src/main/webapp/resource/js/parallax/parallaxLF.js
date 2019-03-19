@@ -9,8 +9,7 @@ $(document).ready(function () {
     function setZindex(){
         var div = $(parentContain).children('div');
         for(var i = 0; i < div.length; i++){
-            var
-            console.log(div.get(i).id);
+
         }
     }
 });
