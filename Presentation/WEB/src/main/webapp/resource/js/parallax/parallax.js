@@ -38,25 +38,13 @@ function setParallaxTD(paraContain, scroll){
     for(var i = 0; i < data.length; i++){
         var selector = $('#' + data.get(i).id);
         var speedData = selector.data('scroll');
-        height += selector.height();
 
-        setDivScroll(scroll, selector, speedData, height);
+        setDivScroll(scroll, selector, speedData, height, i);
     }
 }
 
-function setDivScroll(scroll, selector, speedData, height){
-        var speed = 1;
-        var cHeight = height - selector.height();
-        
-        // 비율이 중요하다 slow 1 fast 150000
-        /*switch (speedData) {
-            case 'slow' :
-                    speed = (cHeight - (scroll / 2));
-                break;
-            case 'fast' :
-                speed = -(scroll / 300000);
-                break;
-        }*/
-        //selector.css({top : speed+"px"});
-    }
+function setDivScroll(scroll, selector, speedData){
+        var speed = ( scroll * -(speedData/10) ) + "px";
+        selector.css({top :speed});
+}
 /** Parallax Time Different Setting END **/

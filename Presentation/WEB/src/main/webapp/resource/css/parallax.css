@@ -8,9 +8,18 @@ html, body{ padding:0; margin: 0; height: 100%; width: 100%;}
 #LFMove_l { width: 100%; height: 100%;}
 
 .iDiv       {   width: 100%; height: 100%;  padding: 0px; margin: 0px; position: relative; }
-.iDivBase   {   width: 100%; height: 100%;  padding: 0px; margin: 0px; }
-.iDivSmall  {   width: 100%; height: 50%;   padding: 0px; margin: 0px; }
 
+.iDivTD   { padding: 0px; margin: 0px; position: relative; }
+.iDivS1   {   width: 100%; height: 10%; }
+.iDivS2   {   width: 100%; height: 20%; }
+.iDivS3   {   width: 100%; height: 30%; }
+.iDivS4   {   width: 100%; height: 40%; }
+.iDivS5   {   width: 100%; height: 50%; }
+.iDivS6   {   width: 100%; height: 60%; }
+.iDivS7   {   width: 100%; height: 70%; }
+.iDivS8   {   width: 100%; height: 80%; }
+.iDivS9   {   width: 100%; height: 90%; }
+.iDivS10  {   width: 100%; height: 100%; }
 /*
     #div1 { background: url("../img/20171004_004.jpg") no-repeat; }
     #div2 { background: url("../img/BackGround 1920x1080.jpg") no-repeat; }
