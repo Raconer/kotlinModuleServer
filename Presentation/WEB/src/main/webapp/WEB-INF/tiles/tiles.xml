@@ -5,8 +5,12 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+    <!-- 기본 레이아웃 템플릿 정의 Start-->
+    <definition name="main_layout"     template="/WEB-INF/views/layout/main/main_layout.jsp">
+        <put-attribute name="common_h" value="/WEB-INF/views/common/header.jsp"/>
+        <put-attribute name="common_f" value="/WEB-INF/views/common/footer.jsp"/>
+    </definition>
 
-    <!-- 기본 레이아웃 템플릿 정의-->
     <definition name="basic_layout"     template="/WEB-INF/views/layout/basic/basic_layout.jsp">
         <put-attribute name="content"   value=""/>
     </definition>
@@ -19,14 +23,18 @@
         <put-attribute name="content"   value=""/>
     </definition>
 
-    <definition name="pLF_layout"    template="/WEB-INF/views/layout/parallax/LFMove/pLF_layout.jsp">
-        <put-attribute name="content"   value=""/>
+
+    <!-- 기본 레이아웃 템플릿 정의 End-->
+
+    <definition name="main" extends="main_layout">
+        <put-attribute name="header" value="/WEB-INF/views/body/parallax/pCenter.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/body/parallax/pCenter.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/body/parallax/pCenter.jsp"/>
     </definition>
 
-    <definition name="main"             extends="basic_layout">
+    <!--<definition name="notice"             extends="basic_layout">
         <put-attribute name="title"     value="Main"/>
         <put-attribute name="header"    value="/WEB-INF/views/header/basic/basic_h.jsp"/>
-        <!--<put-attribute name="body"      value="/WEB-INF/views/main/main.jsp"/>-->
         <put-attribute name="body"      expression="${title}"/>
         <put-attribute name="footer"    value="/WEB-INF/views/footer/notice/notice_f.jsp"/>
     </definition>
@@ -34,7 +42,7 @@
     <definition name="pBasic"           extends="pBasic_layout">
         <put-attribute name="title"     value="pBasic"/>
         <put-attribute name="header"    value="/WEB-INF/views/header/parallax/parallaxB_h.jsp"/>
-        <put-attribute name="body"      value="/WEB-INF/views/main/main.jsp"/>
+        <put-attribute name="body"      value="/WEB-INF/views/main/main_N.jsp"/>
         <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxB_f.jsp"/>
     </definition>
 
@@ -42,12 +50,6 @@
         <put-attribute name="title"     value="pTimeD"/>
         <put-attribute name="header"    value="/WEB-INF/views/header/parallax/parallaxTD_h.jsp"/>
         <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxTD_f.jsp"/>
-    </definition>
-
-    <definition name="LFMove"           extends="pLF_layout">
-        <put-attribute name="title"     value="LFMove"/>
-        <put-attribute name="header"    value="/WEB-INF/views/header/parallax/parallaxLF_h.jsp"/>
-        <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxLF_f.jsp"/>
-    </definition>
+    </definition>-->
 
 </tiles-definitions>

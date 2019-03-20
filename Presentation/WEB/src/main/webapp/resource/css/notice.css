@@ -1,0 +1,15 @@
+
+
+table       { width: 100%; padding: 10px 0px; }
+th,td       { text-align : center; }
+th          { padding: 10px 0px; }
+td          { padding:  6px 0px; font-family: monospace;}
+
+/* Div Notice */
+.t              { display: table; text-align: center; width: 100%; padding: 10px 0px; }
+.tCap           { display: table-caption; }
+.tHeader        { display: table-header-group; font-weight: bold; }
+.tHeader>div    { display: table-cell; padding: 10px 0px; }
+.tRow           { display: table-row; }
+.tRrow>div      { display: table-cell; padding: 6px 0px; font-family: monospace; }
+.tFooter        { text-align: center; font-family: monospace; padding: 6px 0px; }

@@ -1,10 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=utf-8"%>
-<div class="divN">
-    <div class="divNC">
+<div class="t">
+    <div class="tCap">
         게시판( feat.DIV tag )
     </div>
-    <div class="divNH">
+    <div class="tHeader">
         <div>Number</div>
         <div>Category</div>
         <div>Title</div>
@@ -13,7 +13,7 @@
         <div>Date</div>
     </div>
     <c:forEach var="i" begin="1" end="10">
-        <div class="dT_row">
+        <div class="tRow">
             <div>${i}</div>
             <div>category</div>
             <div>title_${i}</div>
@@ -23,7 +23,7 @@
         </div>
     </c:forEach>
 </div>
-<div class="divNF">
+<div class="tFooter">
     <c:forEach var="i" begin="1" end="10">
         ${i}
     </c:forEach>

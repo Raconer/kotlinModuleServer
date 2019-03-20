@@ -1,25 +1,5 @@
 /*All Layout Default Setting*/
-html, body{ padding:0; margin: 0; height: 100%; width: 100%;}
-table{ width: 100%; padding: 10px 0px; }
-th,td{ text-align : center; }
-th{ padding: 10px 0; }
-td{ padding: 6px 0px; font-family: monospace;}
-
-/*Basic_Layout(bal)*/
-.bContainer { width:100%; height:auto; }
-.bHead { width: auto; height:100px; }
-.bCenContent { text-align: center; }
-.bMain { width:1080px; min-height:969px; background-color:lavender; margin: 0 auto; }
-.bFooter { width: auto; height:200px; }
-
-/* Div Notice */
-.divN { display: table; text-align: center; width: 100%; padding: 10px 0px;}
-.divNC { display: table-caption; }
-.divNH { display: table-header-group; font-weight: bold;  }
-.divNH>div { display: table-cell; padding: 10px 0px; }
-.dT_row {display: table-row; }
-.dT_row>div {display: table-cell;  padding: 6px 0px; font-family: monospace;}
-.divNF { text-align: center;  font-family: monospace; padding: 6px 0px;}
+html, body  { padding:0; margin: 0; height: 100%; width: 100%;}
 
 
 

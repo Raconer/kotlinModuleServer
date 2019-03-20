@@ -1,25 +1,20 @@
 /*parallax_Layout*/
-html, body{ padding:0; margin: 0; height: 100%; width: 100%;}
-#parallaxB {height:  100%;}
-/* timeD*/
-#timeDiv { width: 100%; height: 100%;}
+.parallax{  width: 100%; height: 100%;}
 
-/* LF*/
-#LFMove_l { width: 100%; height: 100%;}
+.relDiv  {  padding: 0px; margin: 0px; position: relative; }
+/*Div Height Size*/
+.divS1   {  width: 100%; height: 10%; }
+.divS2   {  width: 100%; height: 20%; }
+.divS3   {  width: 100%; height: 30%; }
+.divS4   {  width: 100%; height: 40%; }
+.divS5   {  width: 100%; height: 50%; }
+.divS6   {  width: 100%; height: 60%; }
+.divS7   {  width: 100%; height: 70%; }
+.divS8   {  width: 100%; height: 80%; }
+.divS9   {  width: 100%; height: 90%; }
+.divS10  {  width: 100%; height: 100%; }
+/*Div Height Size End*/
 
-.iDiv       {   width: 100%; height: 100%;  padding: 0px; margin: 0px; position: relative; }
-
-.iDivTD   { padding: 0px; margin: 0px; position: relative; }
-.iDivS1   {   width: 100%; height: 10%; }
-.iDivS2   {   width: 100%; height: 20%; }
-.iDivS3   {   width: 100%; height: 30%; }
-.iDivS4   {   width: 100%; height: 40%; }
-.iDivS5   {   width: 100%; height: 50%; }
-.iDivS6   {   width: 100%; height: 60%; }
-.iDivS7   {   width: 100%; height: 70%; }
-.iDivS8   {   width: 100%; height: 80%; }
-.iDivS9   {   width: 100%; height: 90%; }
-.iDivS10  {   width: 100%; height: 100%; }
 /*
     #div1 { background: url("../img/20171004_004.jpg") no-repeat; }
     #div2 { background: url("../img/BackGround 1920x1080.jpg") no-repeat; }
@@ -33,22 +28,3 @@ html, body{ padding:0; margin: 0; height: 100%; width: 100%;}
     회색                  rgb(70, 76, 94);
     초록                  rgb(108, 191, 114);
 */
-/*
-        position
-        static      :   본래의 박스를 생성 자연스럽게 배치되는 형태, 즉 일반적인 흐름에 맞춰 위치를 잡는다.
-        relative    :   상대 배치, 그 요소의 본래의 위치를 기준으로 일정한 거리를 옮겨 배치할수 있고
-                        top, left, right, bottom값을 지정하여 위치를 옮길수 있으며
-                        , absolute를 사용할때 영역을 잡아주는 어미 역활을 해준다.
-        absolute    :   절대위치를 의미함, 이 속성은 문서의 흐름과는 관계없이 마음대로 아무 위치에나 배치할수 있는 기능인데
-                        부모요소를 기준으로 거리를 지정해 주면된다.
-                        따로 상위 요소가 없는 경우에는 브라우저의 왼쪽 위 모서리를 기준으로 왼쪽으로 거리와
-                        위쪽을 기준으로 아래로 거리를 지정할수 있다.
-        fiexed      :   고정 배치.
-                        박스가 absolute 로 지정된것 뿐만 아니라 윈도우 스크롤등 영역이동에 대해서도 고정됨.
-                        즉 스크롤바를 움직이더라도 항상 주어진 위치에 요소가 고정됨.
-
-        일단은 slow는 fiexed
-
-        relative
-*/
-

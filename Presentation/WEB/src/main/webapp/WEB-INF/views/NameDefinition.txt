@@ -1,0 +1,5 @@
+Class 사용법에 따른 Naming
+
+parallax : parallax를 감싸는 Div
+
+divS[1~10] : Div Height 사이즈
