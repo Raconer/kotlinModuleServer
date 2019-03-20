@@ -12,7 +12,6 @@ class ParallaxContoller{
 
     @GetMapping("parallax/basic")
     fun basic(model: Model, request: HttpServletRequest):String{
-        model["templateID"] = 1
         return "pBasic"
     }
 

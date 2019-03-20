@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest
 
 @Controller
 class NoticeController{
+    @Autowired
+    lateinit var mainService: MainService
 
     @GetMapping("/notice/{templateID}")
     fun notice(model: Model, request: HttpServletRequest, @PathVariable templateID: Int, mav: ModelAndView):String{
@@ -34,7 +36,7 @@ class NoticeController{
     }
 
     @GetMapping("/notice")
-    fun notice(@RequestParam("id") id :Int) : String{
+    fun noticeList(@RequestParam("id") id :Int): String {
         System.out.println("Notice : $id")
         val path : String = when(id){
             2 -> "/notice/div_N"
@@ -42,11 +44,4 @@ class NoticeController{
         }
         return path
     }
-
-    @Autowired
-    lateinit var mainService: MainService
-
-
-
-
 }

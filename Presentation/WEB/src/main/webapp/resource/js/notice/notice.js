@@ -1,7 +1,6 @@
 $(document).ready(function () {
-
     readNoticeTemplate(id);
-    function readNoticeTemplate(id){
+    function readNoticeTemplate(id) {
         $.ajax({
             type:"GET",
             url : "/notice" ,
@@ -10,10 +9,9 @@ $(document).ready(function () {
             dataType : "text",
             success : function (data) {
                 $("#noticeList").append(data);
-                //document.getElementById("#noticeList").append(data);
             },
-            error : function () {
-                alert("notice template read error");
+            error : function (request,status,error) {
+                alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
             }
         });
     }
