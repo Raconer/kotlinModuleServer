@@ -17,7 +17,7 @@
     <definition name="basic_layout"     template="/WEB-INF/views/layout/basic/basic_layout.jsp" extends="basic">
     </definition>
 
-    <definition name="pBasic_layout" template="/WEB-INF/views/body/parallax/pBasic.jsp" extends="basic">
+    <definition name="pBasic_layout" template="/WEB-INF/views/layout/parallax/parallax_layout.jsp" extends="basic">
     </definition>
 
     <definition name="pTimeD_layout" template="/WEB-INF/views/body/parallax/pTimeD.jsp" extends="basic">
@@ -45,12 +45,11 @@
         <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxB_f.jsp"/>
     </definition>
 
-
-    <!--
-    <definition name="pTimeD"           extends="pTimeD_layout">
+    <definition name="pTimeD"           extends="pBasic_layout">
         <put-attribute name="title"     value="pTimeD"/>
         <put-attribute name="header"    value="/WEB-INF/views/header/parallax/parallaxTD_h.jsp"/>
+        <put-attribute name="body"      value="/WEB-INF/views/body/parallax/pTimeD.jsp"/>
         <put-attribute name="footer"    value="/WEB-INF/views/footer/parallax/parallaxTD_f.jsp"/>
-    </definition>-->
+    </definition>
 
 </tiles-definitions>

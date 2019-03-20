@@ -3,7 +3,6 @@ $(document).ready(function () {
     makeDivColor(paraContain);
 
     $(window).scroll(function () {
-
         var scroll = $(this).scrollTop();
         setParallaxTD(paraContain, scroll);
     });
