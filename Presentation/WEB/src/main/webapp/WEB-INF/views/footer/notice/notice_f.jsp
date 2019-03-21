@@ -1,1 +1,1 @@
-<script rel="script" src="../../../../resource/js/notice/notice.js"></script>
+<script rel="script" src="/resource/js/notice/notice.js"></script>

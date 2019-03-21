@@ -1,5 +1,5 @@
-Class 사용법에 따른 Naming
+-Dir 의 이름이 main 인 것들은 프로젝트의 Base가 되는 틀 소스 이다
 
-parallax : parallax를 감싸는 Div
-
-divS[1~10] : Div Height 사이즈
+-Class 사용법에 따른 Naming
+    - parallax      : parallax를 감싸는 Div
+    - divS[1~10]    : Div Height 사이즈

@@ -1,0 +1,1 @@
+<link rel="script" href="/resource/css/common.css" type="text/css">
