@@ -15,6 +15,22 @@
 .divS10  {  width: 100%; height: 100%; }
 /*Div Height Size End*/
 
+/*Div Height position*/
+.pos1, .pos2, .pos3, .pos4, .pos5, .pos6, .pos7, .pos8, .pos9, .pos10{
+    position: relative;
+}
+.pos1   { top : 15%; }
+.pos2   { top : 25%; }
+.pos3   { top : 35%; }
+.pos4   { top : 45%; }
+.pos5   { top : 55%; }
+.pos6   { top : 65%; }
+.pos7   { top : 75%; }
+.pos8   { top : 85%; }
+.pos9   { top : 95%; }
+.pos10  { top : 100%; }
+/*Div Height Size End*/
+
 /*
     #div1 { background: url("../img/20171004_004.jpg") no-repeat; }
     #div2 { background: url("../img/BackGround 1920x1080.jpg") no-repeat; }

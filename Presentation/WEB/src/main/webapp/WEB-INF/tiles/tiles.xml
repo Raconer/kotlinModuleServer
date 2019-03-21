@@ -11,24 +11,24 @@
         <put-attribute name="common_f" value="/WEB-INF/views/common/footer.jsp"/>
     </definition>
 
-    <definition name="main_layout"     template="/WEB-INF/views/layout/main/main_layout.jsp" extends="basic">
+    <definition name="main_layout"      template="/WEB-INF/views/layout/main/main_layout.jsp"           extends="basic">
     </definition>
 
-    <definition name="basic_layout"     template="/WEB-INF/views/layout/basic/basic_layout.jsp" extends="basic">
+    <definition name="basic_layout"     template="/WEB-INF/views/layout/basic/basic_layout.jsp"         extends="basic">
     </definition>
 
-    <definition name="pBasic_layout" template="/WEB-INF/views/layout/parallax/parallax_layout.jsp" extends="basic">
+    <definition name="pBasic_layout"    template="/WEB-INF/views/layout/parallax/parallax_layout.jsp"   extends="basic">
     </definition>
 
-    <definition name="pTimeD_layout" template="/WEB-INF/views/body/parallax/pTimeD.jsp" extends="basic">
+    <definition name="pTimeD_layout"    template="/WEB-INF/views/body/parallax/pTimeD.jsp"              extends="basic">
     </definition>
 
     <!-- 기본 레이아웃 템플릿 정의 End-->
 
     <definition name="main" extends="main_layout">
-        <put-attribute name="header"    value="/WEB-INF/views/body/parallax/pCenter.jsp"/>
+        <put-attribute name="header"    value="/WEB-INF/views/header/main/main_h.jsp"/>
         <put-attribute name="body"      value="/WEB-INF/views/body/parallax/pCenter.jsp"/>
-        <put-attribute name="footer"    value="/WEB-INF/views/body/parallax/pCenter.jsp"/>
+        <put-attribute name="footer"    value="/WEB-INF/views/footer/main/main_f.jsp"/>
     </definition>
 
     <definition name="notice"   extends="basic_layout">
