@@ -2,9 +2,12 @@
 var standardScroll = $(window).scrollTop();
 
 function setScrollUpDown(scroll){
-    scroll = standardScroll - scroll > 0? -scroll: scroll;
+    var tempScroll= scroll;
+    if(standardScroll > tempScroll){
+        tempScroll = -tempScroll
+    }
     standardScroll = scroll;
-    return scroll;
+    return tempScroll;
 }
 /**Other**/
 // 화면 RESIZE
@@ -61,22 +64,24 @@ function setDivScroll(selector, scroll, speedData){
 function setParallaxC(parentDiv, scroll) {
     var parent = $(parentDiv);
     var root = parent.children('div');
+
     for(var i = 0; i < root.length; i++){
-        var child = $('#' + root.get(i).id).children('div');
+        var rootSel = $('#' + root.get(i).id);
+        var child = rootSel.children('div');
+        var rootTop = rootSel.offset().top;
         for(var j = 0; j < child.length; j++){
             var data = $('#' + child.get(j).id);
-            setCScroll(data, scroll);
+            setCScroll(data, scroll, rootTop);
         }
     }
 }
 
-function setCScroll(data, scroll) {
+function setCScroll(data, scroll, rootTop) {
+    //console.log((rootTop-(scroll* .5)) +'/' +scroll +'/' + rootTop)
+    var margintop = data.css("margin-top");
     var top = data.offset().top;
-    var speed = top + (setScrollUpDown(scroll) * - (5/10) ) + "px";
-    console.log(speed)
-    data.css({top : speed})
+    console.log( (margintop +  (scroll* .5)+'px'));
+    data.css("margin-top", ((margintop +  (scroll* .5)+'px')));
+
 }
 /** Parallax Center Setting END **/
-
-//background-position:
-// padding-top

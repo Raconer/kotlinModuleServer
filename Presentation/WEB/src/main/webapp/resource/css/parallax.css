@@ -16,19 +16,35 @@
 /*Div Height Size End*/
 
 /*Div Height position*/
-.pos1, .pos2, .pos3, .pos4, .pos5, .pos6, .pos7, .pos8, .pos9, .pos10{
+.divT1, .divT2, .divT3, .divT4, .divT5, .divT6, .divT7, .divT8, .divT9, .divT10{
     position: relative;
 }
-.pos1   { top : 15%; }
-.pos2   { top : 25%; }
-.pos3   { top : 35%; }
-.pos4   { top : 45%; }
-.pos5   { top : 55%; }
-.pos6   { top : 65%; }
-.pos7   { top : 75%; }
-.pos8   { top : 85%; }
-.pos9   { top : 95%; }
-.pos10  { top : 100%; }
+
+.divPT1, .divPT2, .divPT3, .divPT4, .divPT5, .divPT6, .divPT7, .divPT8, .divPT9, .divPT10{
+    position: absolute;
+}
+
+.divT1   { top : 15%; }
+.divT2   { top : 25%; }
+.divT3   { top : 35%; }
+.divT4   { top : 45%; }
+.divT5   { top : 55%; }
+.divT6   { top : 65%; }
+.divT7   { top : 75%; }
+.divT8   { top : 85%; }
+.divT9   { top : 95%; }
+.divT10  { top : 100%; }
+
+.divPT1  { margin-top : 15%; }
+.divPT2  { margin-top : 25%; }
+.divPT3  { margin-top : 35%; }
+.divPT4  { margin-top : 45%; }
+.divPT5  { margin-top : 55%; }
+.divPT6  { margin-top : 65%; }
+.divPT7  { margin-top : 75%; }
+.divPT8  { margin-top : 85%; }
+.divPT9  { margin-top : 95%; }
+.divPT10 { margin-top : 100%; }
 /*Div Height Size End*/
 
 /*

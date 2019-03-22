@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
        var scroll = $(this).scrollTop();
+
        setParallaxC(parent, scroll);
    });
 });
