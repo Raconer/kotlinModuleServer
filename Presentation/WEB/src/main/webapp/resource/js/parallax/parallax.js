@@ -1,4 +1,12 @@
 // parallax 만들어야할 function 속도 조절
+
+var parallax = $(".parallaxTest");
+var baseTop = new Array();
+parallax.each(function(index){
+    baseTop[index] = $(this).offset().top;
+});
+
+
 var standardScroll = $(window).scrollTop();
 
 function setScrollUpDown(scroll){
@@ -25,7 +33,7 @@ function setParallaxB(parentDiv, scroll){
     var height = parent.offset().top;
 
     for(var i = 0; i< root.length; i++){
-        var selector = $("#" + root.get(i).id);
+        var selector = $("#" + root.get(i));
         height += selector.height();
         parallaxScroll(scroll, selector, height);
     }
@@ -62,6 +70,7 @@ function setDivScroll(selector, scroll, speedData){
 
 /** Parallax Center Setting  **/
 function setParallaxC(parentDiv, scroll) {
+
     var parent = $(parentDiv);
     var root = parent.children('div');
 
@@ -71,17 +80,12 @@ function setParallaxC(parentDiv, scroll) {
         var rootTop = rootSel.offset().top;
         for(var j = 0; j < child.length; j++){
             var data = $('#' + child.get(j).id);
-            setCScroll(data, scroll, rootTop);
+            setCScroll(data, scroll, baseTop[j]);
         }
     }
 }
 
 function setCScroll(data, scroll, rootTop) {
-    //console.log((rootTop-(scroll* .5)) +'/' +scroll +'/' + rootTop)
-    var margintop = data.css("margin-top");
-    var top = data.offset().top;
-    console.log( (margintop +  (scroll* .5)+'px'));
-    data.css("margin-top", ((margintop +  (scroll* .5)+'px')));
-
+    data.css("top", rootTop - scroll);
 }
 /** Parallax Center Setting END **/
