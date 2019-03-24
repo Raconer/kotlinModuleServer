@@ -3,7 +3,7 @@
 var parallax = $(".parallaxTest");
 var baseTop = new Array();
 parallax.each(function(index){
-    baseTop[index] = $(this).offset().top;
+    baseTop[index] = parseInt($(this).css("top"));
 });
 
 
@@ -69,23 +69,19 @@ function setDivScroll(selector, scroll, speedData){
 /** Parallax Time Different Setting END **/
 
 /** Parallax Center Setting  **/
-function setParallaxC(parentDiv, scroll) {
-
-    var parent = $(parentDiv);
-    var root = parent.children('div');
-
-    for(var i = 0; i < root.length; i++){
-        var rootSel = $('#' + root.get(i).id);
-        var child = rootSel.children('div');
-        var rootTop = rootSel.offset().top;
-        for(var j = 0; j < child.length; j++){
-            var data = $('#' + child.get(j).id);
-            setCScroll(data, scroll, baseTop[j]);
+function setParallaxC( scroll) {
+    parallax.each(function(index){
+        var root = $(this);
+        var parent = root.parent("div");
+        var parentTop = parent.offset().top;
+        var parentHeight = parent.height();
+        var speed = root.data("scroll");
+        if (typeof(speed) == 'undefined') {
+            speed = 1;
         }
-    }
-}
-
-function setCScroll(data, scroll, rootTop) {
-    data.css("top", rootTop - scroll);
+        if( (parentTop + parentHeight) > scroll && scroll > parentTop){
+            root.css("top", baseTop[index] - ((scroll-parentTop)*(speed/100)));
+        }
+    });
 }
 /** Parallax Center Setting END **/
